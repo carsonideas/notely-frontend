@@ -102,5 +102,3 @@ export const NoteContent: React.FC<NoteContentProps> = ({ content }) => {
     </Paper>
   );
 };
-
-export default NoteContent;

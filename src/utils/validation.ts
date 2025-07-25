@@ -48,21 +48,21 @@ export const isValidName = (name: string): boolean => {
 };
 
 /**
- * Blog title validation rules:
+ * Note title validation rules:
  * - Between 3 and 100 characters long
  * - Not just whitespace
  */
-export const isValidBlogTitle = (title: string): boolean => {
+export const isValidNoteTitle = (title: string): boolean => {
   const trimmedTitle = title.trim();
   return trimmedTitle.length >= 3 && trimmedTitle.length <= 100;
 };
 
 /**
- * Blog content validation rules:
- * - At least 100 characters long
+ * Note content validation rules:
+ * - At least 10 characters long
  * - Not just whitespace
  */
-export const isValidBlogContent = (content: string): boolean => {
+export const isValidNoteContent = (content: string): boolean => {
   const trimmedContent = content.trim();
   return trimmedContent.length >= 10;
 };

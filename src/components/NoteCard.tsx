@@ -10,9 +10,10 @@ import { useNoteStore } from '../stores/noteStore'
 interface NoteCardProps {
   note: Note
   showActions?: boolean
+  onEdit?: () => void
 }
 
-export const NoteCard: React.FC<NoteCardProps> = ({ note, showActions = true }) => {
+export const NoteCard: React.FC<NoteCardProps> = ({ note, showActions = true, onEdit }) => {
   const navigate = useNavigate()
   const { user } = useAuthStore()
   const { deleteNote } = useNoteStore()
@@ -64,7 +65,11 @@ export const NoteCard: React.FC<NoteCardProps> = ({ note, showActions = true }) 
     event.preventDefault()
     event.stopPropagation()
     handleMenuClose()
-    navigate(`/notes/${note.id}/edit`)
+    if (onEdit) {
+      onEdit()
+    } else {
+      navigate(`/notes/${note.id}/edit`)
+    }
   }
 
   const handleDelete = async (event: React.MouseEvent) => {

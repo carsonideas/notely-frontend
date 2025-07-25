@@ -15,9 +15,11 @@ import {
 import {
   Brightness4,
   Brightness7,
-  Create as CreateIcon
+  Create as CreateIcon,
+  Delete as TrashIcon
 } from '@mui/icons-material';
 import { useAuthStore } from '../stores/authStore';
+import { ProfileModal } from './ProfileModal';
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -28,6 +30,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
   const navigate = useNavigate();
   const { user, logout, isAuthenticated } = useAuthStore();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [profileModalOpen, setProfileModalOpen] = useState(false);
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -45,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
 
   const handleProfile = () => {
     handleClose();
-    navigate('/profile');
+    setProfileModalOpen(true);
   };
 
   const getInitials = (firstName?: string, lastName?: string) => {
@@ -110,18 +113,18 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
             <Button
               color="inherit"
               component={Link}
-              to="/notes/create"
-              startIcon={<CreateIcon />}
+              to="/trash"
+              startIcon={<TrashIcon />}
               sx={{ 
-                fontSize: 19,
-                fontWeight: 700,
+                fontSize: 16,
+                fontWeight: 600,
                 background: "linear-gradient(45deg, #ff6a00, #f7bb97)",
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Create Note
+              Trash
             </Button>
             <IconButton
               size="large"
@@ -183,6 +186,12 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           </Box>
         )}
       </Toolbar>
+      
+      {/* Profile Modal */}
+      <ProfileModal
+        open={profileModalOpen}
+        onClose={() => setProfileModalOpen(false)}
+      />
     </AppBar>
   );
 };
