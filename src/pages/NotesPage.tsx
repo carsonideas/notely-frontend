@@ -66,12 +66,6 @@ import { formatDate } from '../utils/dateFormat';
 import { uploadImageToCloudinary } from '../utils/cloudinary';
 import { NotesListModal } from '../components/NotesListModal';
 
-/**
- * Time Slot Component
- * 
- * Renders individual time slots in the grid. Shows either notes for that time
- * or an "Add Note" placeholder when empty.
- */
 interface TimeSlotProps {
   time: string;
   notes: Note[];
