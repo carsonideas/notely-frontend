@@ -740,13 +740,13 @@ const NotesPage = () => {
                   </Box>
                   
                   {/* Divider */}
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  {/* <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                     <Box sx={{ flex: 1, height: '1px', bgcolor: '#ddd' }} />
                     <Typography variant="caption" sx={{ color: '#666' }}>OR</Typography>
                     <Box sx={{ flex: 1, height: '1px', bgcolor: '#ddd' }} />
                   </Box>
                   
-                  {/* Image URL */}
+                  Image URL
                   <Box sx={{ display: 'flex', gap: 1 }}>
                     <TextField
                       label="Image URL"
@@ -764,7 +764,7 @@ const NotesPage = () => {
                     >
                       Add
                     </Button>
-                  </Box>
+                  </Box> */}
                 </Box>
               )}
             </Box>
