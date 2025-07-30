@@ -32,7 +32,7 @@ export const useNoteStore = create<NoteStore>((set, get) => ({
       set({ notes: response.notes || response, loading: false });
     } catch (error: any) {
       console.error('Fetch notes error:', error);
-      set({ error: error.message || 'Failed to fetch notes', loading: false });
+      set({ error: error.message  || '& Failed to fetch notes', loading: false });
       throw error;
     }
   },
