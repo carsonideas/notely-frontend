@@ -1,17 +1,3 @@
-/**
- * NOTELY FRONTEND - NOTES LIST MODAL COMPONENT
- * 
- * This component implements the exact notes list modal design as shown in the provided image.
- * Features a clean layout with search header, categorized notes sections, and clean typography.
- * 
- * Key Features:
- * - Exact design match with provided image
- * - Clean beige background
- * - Search header with hamburger menu and search icon
- * - Categorized notes sections
- * - Clean typography and spacing
- * - Responsive design
- */
 
 import React, { useState, useEffect } from 'react';
 import {

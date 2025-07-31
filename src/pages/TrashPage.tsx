@@ -1,20 +1,3 @@
-/**
- * NOTELY FRONTEND - TRASH PAGE COMPONENT
- * 
- * This component displays all deleted notes and provides functionality to restore
- * or permanently delete them. It follows the same design patterns as NotesPage
- * but focuses on deleted note management.
- * 
- * Key Features:
- * - Display all deleted notes in a grid layout
- * - Search functionality for deleted notes
- * - Restore notes back to active state
- * - Permanent deletion option
- * - Responsive design with Material-UI components
- * 
- * Architecture Pattern: This follows the Container/Presentational pattern where
- * this component acts as a container managing state and business logic.
- */
 
 import { useState, useEffect } from 'react'
 import {
@@ -39,17 +22,6 @@ import { useNoteStore } from '../stores/noteStore'
 import { Note } from '../types/Note'
 import { formatDate } from '../utils/dateFormat'
 
-/**
- * TrashPage Component
- * 
- * Manages the display and interaction with deleted notes. Provides users
- * with the ability to review, restore, or permanently delete their notes.
- * 
- * State Management:
- * - Uses noteStore for deleted notes data and operations
- * - Local state for search filtering and UI interactions
- * - Navigation state for returning to main notes page
- */
 const TrashPage = () => {
   // Store hooks for deleted notes management
   const { deletedNotes, fetchDeletedNotes, restoreNote, loading, error, clearError } = useNoteStore()

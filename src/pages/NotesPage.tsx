@@ -1,24 +1,4 @@
 
-
-/**
- * NOTELY FRONTEND - NOTES PAGE COMPONENT (NOTEPAD LAYOUT)
- * 
- * This component implements the desired notepad layout with a grid-based time slot system.
- * It provides an intuitive interface for creating, viewing, and managing notes in a 
- * calendar-like format with pop-up modals for all interactions.
- * 
- * Key Features:
- * - Grid-based time slot layout (9AM, 10AM, 11AM, 1PM, 2PM)
- * - Author profile tabs for filtering notes
- * - Pop-up modals for creating, editing, and viewing notes
- * - Side panel for note details and comments
- * - Drag-and-drop style note cards
- * - Real-time note management with backend synchronization
- * 
- * Architecture Pattern: This follows the Container/Presentational pattern with
- * integrated state management for complex note interactions.
- */
-
 import React, { useState, useEffect } from 'react';
 import {
   Box,

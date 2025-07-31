@@ -1,18 +1,4 @@
-/**
- * NOTELY FRONTEND - PROFILE MODAL COMPONENT
- * 
- * This component implements the exact profile modal design as shown in the provided image.
- * Features a clean, modern design with beige background, centered profile card with
- * avatar, name, location, and menu items.
- * 
- * Key Features:
- * - Exact design match with provided image
- * - Clean beige background
- * - Centered profile card layout
- * - Avatar with name and location
- * - Menu items with icons and arrows
- * - Responsive design
- */
+
 
 import React from 'react';
 import {
